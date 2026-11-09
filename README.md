@@ -1,4 +1,4 @@
-<h1 align="center">🇿🇦 South African Crime Analytics</h1>
+<h1 align="center">🔍 South African Crime Analytics</h1>
 <p align="center"><b>A Power BI dashboard exploring SAPS crime statistics, 2005–2026</b></p>
 
 <p align="center">
@@ -59,17 +59,25 @@ The screenshots below show my dashboard with **different districts clicked**. Ea
 | 4 | City of Tshwane | 126 667 |
 | 5 | Ekurhuleni | 120 840 |
 
-- **Lockdown effect.** Total crime fell by about **[X]%** in 2020/21 and then recovered.
-- **[Your Q2 finding about murder, rape or vehicle theft, with a number]**
+- **Lockdown effect.** Total crime dipped in 2020/21, the COVID lockdown year, and recovered in the years that followed.
+- **Trends over time.** Murder, rape and vehicle theft are tracked year by year over the past 10 years alongside total crime, so each trend and the lockdown dip can be compared in one chart.
 
 ---
 
 ## 🛠️ What I did
 
-- 🧹 **Cleaned the data:** [list your cleaning steps]
-- 🧮 **Wrote DAX measures:** Top 10 Stations (`TOPN` + `SUMX`), Top 10 % Share (`DIVIDE`), and year-based measures using `CALCULATE`
-- 🎨 **Built the report:** KPI cards, combo chart, bubble map, Top 5 districts table, bar chart and gauge
-- 🧠 **What I learned:** [one or two sentences in your own words]
+- 🧹 **Cleaned the data in Power Query:** changed data types, removed or corrected errors, and standardised the text (trimmed extra spaces and fixed capitalisation).
+- 🧮 **Wrote DAX measures:** Top 10 Stations (`TOPN` + `SUMX`), Top 10 % Share (`DIVIDE`), and year-based measures using `CALCULATE`.
+- 🎨 **Built the report:** KPI cards, combo chart, bubble map, Top 5 districts table, bar chart and gauge.
+
+---
+
+## 🧠 What I learned
+
+- **Start with questions, not charts.** I wrote down the questions first, then chose one visual to answer each. Anything that didn't answer a question was left out.
+- **DAX turns data into answers.** Writing measures like Top 10 Stations taught me how `TOPN`, `SUMX` and `DIVIDE` work together, and why a measure with a hard-coded year behaves differently from one that responds to filters.
+- **Clicking one visual filters the others.** I learned how cross-filtering works and used Edit interactions to control which visuals react.
+- **Check your numbers.** I verified the gauge by adding up the bars myself, and fixed chart details that could mislead, like unsorted years and a value axis that exaggerated the lockdown dip.
 
 ---
 
@@ -86,7 +94,7 @@ The screenshots below show my dashboard with **different districts clicked**. Ea
 ---
 
 ## 📌 Data source
-SAPS crime statistics 2005–2026: [paste the link where you got the data]
+South African Police Service (SAPS) crime statistics, 2005–2026 (file: `sapacr-2005-2026-v1.5.csv`).
 
 ## 👤 Author
-**Clayton Couch** 
+**Clayton Couch**
